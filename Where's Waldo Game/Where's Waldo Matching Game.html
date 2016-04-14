@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+    #leftSide{
+        position:absolute;
+        width:500px;
+        height:500px;
+    }
+    #rightSide{
+        position:absolute;
+        width:500px;
+        height:500px;
+        left:500px;
+        border-left:1px solid black;
+    }
+    div{
+        position:absolute;
+        width:500px;
+        height:500px;
+    }
+    </style>
+</head>
+<body id="waldoMatchGame" onload="generateWaldos()">
+    <h1><b>Where's Waldo Matching Game</b></h1>
+    <p>Click on the extra Waldo on the left.</p>
+    <div id="leftSide">
+    </div>
+    <div id="rightSide">
+    </div>
+    <script>
+        var numberOfWaldos = 5;
+        var theLeftSide = document.getElementById("leftSide");
+        var theRightSide = document.getElementById("rightSide");
+        function generateWaldos(){
+            for(var i = 0; i < numberOfWaldos; i++){
+                var top = parseInt(Math.random() * 401);
+                var left = parseInt(Math.random() * 401);
+                var waldo = document.createElement("img");
+                waldo.setAttribute("src","waldo.png");
+                waldo.style.position = "absolute";
+                waldo.style.top = top + "px";
+                waldo.style.left = left + "px";
+                theLeftSide.appendChild(waldo);
+                leftSideImages = theLeftSide.cloneNode(true);
+                leftSideImages.removeChild(leftSideImages.lastChild);
+                theRightSide.appendChild(leftSideImages);
+            }
+            var theBody = document.getElementsByTagName("body")[0];
+            theLeftSide.lastChild.onclick = function nextLevel(event){
+                event.stopPropagation();
+                while (theLeftSide.firstChild){
+                    theLeftSide.removeChild(theLeftSide.firstChild);
+                }
+                while (theRightSide.firstChild){
+                    theRightSide.removeChild(theRightSide.firstChild);
+                }
+                numberOfWaldos += 5;
+                generateWaldos();
+            };
+             theBody.onclick = function gameOver() {
+                 alert("Game Over!");
+                 theBody.onclick = null;
+                 theLeftSide.lastChild.onclick = null;
+             };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AcmeProduct", "http://localhost:65339", "{C8F392CB-1941-44BC-AF56-2736D89E897B}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65339"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\ISM4234\AcmeProduct\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65339\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65339"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\ISM4234\AcmeProduct\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65339\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\..\..\..\ISM4234\AcmeProduct\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8F392CB-1941-44BC-AF56-2736D89E897B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F392CB-1941-44BC-AF56-2736D89E897B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

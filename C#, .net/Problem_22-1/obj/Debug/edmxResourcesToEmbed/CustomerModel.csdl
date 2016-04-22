@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AcmeModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AcmeEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="AcmeModel.Customer" />
+    <EntitySet Name="Employees" EntityType="AcmeModel.Employee" />
+    <AssociationSet Name="FK_CustomerEmployee" Association="AcmeModel.FK_CustomerEmployee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeEmployee" Association="AcmeModel.FK_EmployeeEmployee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee1" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustNo" />
+    </Key>
+    <Property Name="CustNo" Type="Int16" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Street" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="Zip" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="true" />
+    <Property Name="CreditLimit" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="AcctRepNo" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="AcmeModel.FK_CustomerEmployee" FromRole="Customer" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpNo" />
+    </Key>
+    <Property Name="EmpNo" Type="Int16" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="JobTitle" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="HireDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Salary" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="MgrNo" Type="Int16" />
+    <Property Name="DeptNo" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Customers" Relationship="AcmeModel.FK_CustomerEmployee" FromRole="Employee" ToRole="Customer" />
+    <NavigationProperty Name="Employee1" Relationship="AcmeModel.FK_EmployeeEmployee" FromRole="Employee" ToRole="Employee1" />
+    <NavigationProperty Name="Employee2" Relationship="AcmeModel.FK_EmployeeEmployee" FromRole="Employee1" ToRole="Employee" />
+  </EntityType>
+  <Association Name="FK_CustomerEmployee">
+    <End Role="Employee" Type="AcmeModel.Employee" Multiplicity="1" />
+    <End Role="Customer" Type="AcmeModel.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpNo" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="AcctRepNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeEmployee">
+    <End Role="Employee" Type="AcmeModel.Employee" Multiplicity="0..1" />
+    <End Role="Employee1" Type="AcmeModel.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpNo" />
+      </Principal>
+      <Dependent Role="Employee1">
+        <PropertyRef Name="MgrNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

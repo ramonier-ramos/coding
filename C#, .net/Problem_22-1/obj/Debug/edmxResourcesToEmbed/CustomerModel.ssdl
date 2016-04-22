@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AcmeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AcmeModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="AcmeModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employee" EntityType="AcmeModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_CustomerEmployee" Association="AcmeModel.Store.FK_CustomerEmployee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeEmployee" Association="AcmeModel.Store.FK_EmployeeEmployee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee1" EntitySet="Employee" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustNo" />
+    </Key>
+    <Property Name="CustNo" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="Street" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="State" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="Zip" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="Phone" Type="char" Nullable="false" MaxLength="14" />
+    <Property Name="CreditLimit" Type="smallmoney" Nullable="false" />
+    <Property Name="AcctRepNo" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpNo" />
+    </Key>
+    <Property Name="EmpNo" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="JobTitle" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="HireDate" Type="date" Nullable="false" />
+    <Property Name="Salary" Type="smallmoney" Nullable="false" />
+    <Property Name="MgrNo" Type="smallint" />
+    <Property Name="DeptNo" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CustomerEmployee">
+    <End Role="Employee" Type="AcmeModel.Store.Employee" Multiplicity="1" />
+    <End Role="Customer" Type="AcmeModel.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpNo" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="AcctRepNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeEmployee">
+    <End Role="Employee" Type="AcmeModel.Store.Employee" Multiplicity="0..1" />
+    <End Role="Employee1" Type="AcmeModel.Store.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpNo" />
+      </Principal>
+      <Dependent Role="Employee1">
+        <PropertyRef Name="MgrNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

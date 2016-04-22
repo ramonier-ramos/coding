@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="University of South Florida">
+  <meta name="description" content="The USF NetID is used to access a variety of password-protected information and resources available only to USF students, faculty and staff.">
+  <meta name="keywords" content="University of South Florida NetID, single sign-on, password-protected, MyUSF">
+
+  <link type="text/css" rel="stylesheet" media="screen" href="https://cdn.usf.edu/themes/sun-globe/global/1.0.0/css/global-styles.css" />
+  <link type="text/css" rel="stylesheet" media="screen" href="https://cdn.usf.edu/themes/sun-globe/applications/1.0.0/css/applications.css" />
+  <!--[if lt IE 9]><link type="text/css" rel="stylesheet" media="screen" href="https://cdn.usf.edu/themes/sun-globe/applications/1.0.0/css/ie-styles.css" /><![endif]-->
+
+  <link rel="stylesheet" media="screen" href="css/bootstrap.css" />
+  <link rel="stylesheet" media="screen" href="/css/webauth/cas.css">
+  <link rel="stylesheet" media="only screen and (max-width: 550px)" href="/css/webauth/mobile.css">
+  <link rel="stylesheet" media="only screen and (min-width: 551px) and (max-width: 1000px)" href="/css/webauth/tablet-portrait.css">
+
+  <link rel="shortcut icon" href="https://cdn.usf.edu/favicon.ico" />
+  <title>USF NetID Single-SignOn | University of South Florida</title>
+
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/input-filters.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.usf.edu/js/functions.js"></script>
+    <script type="text/javascript" src="https://cdn.usf.edu/js/secondary-functions.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/desktop.js"></script>
+      <!--[if lt IE 9]><script>$(document).ready(function() { $("tr:odd").addClass("odd"); });</script><![endif]-->
+
+</head>
+
+<body>
+    <header role="banner">
+        <div class="top-bar-wrapper">
+            <div class="top-bar container">
+                <a class="top-bar-logo" href="http://www.usf.edu/"><img src="https://cdn.usf.edu/themes/sun-globe/global/1.0.0/images/header/top-bar/top-bar-welcome.png" alt="Welcome to the University of South Florida" /></a>
+            </div><!-- end top-bar -->
+        </div><!-- end top-bar-wrapper -->
+        
+        <div class="inside-header">
+            <div class="banner">
+                <h1><a class="banner-logo-link" href="http://www.usf.edu/"><img class="banner-logo" src="https://cdn.usf.edu/themes/sun-globe/global/1.0.0/images/header/banner/banner-logo.png" alt="University of South Florida" /></a></h1>
+            </div><!-- end banner -->
+            <nav class="main-navigation" role="navigation">
+                <ul class="main-nav-six container">
+                    <li><a href="http://www.usf.edu/about-usf/index.aspx">About USF</a></li>
+                    <li><a href="http://www.usf.edu/academics/index.aspx">Academics</a></li>
+                    <li><a href="http://www.usf.edu/admissions/index.aspx">Admissions</a></li>
+                    <li><a href="http://www.usf.edu/campus-life/index.aspx">Campus Life</a></li>
+                    <li><a href="http://www.usf.edu/research/index.aspx">Research</a></li>
+                    <li><a href="http://system.usf.edu/">USF System</a></li>
+                </ul>
+            </nav>  <!-- end main-navigation -->
+          <div class="top-bar-nav-wrapper container">
+                <div class="top-bar-nav">
+                    <div class="top-bar-item top-bar-search" style="height: 22px;">
+                        <form method="get" action="http://search.usf.edu/search" role="search">
+                            <label class="hidden" for="top-bar-search-input">Search for: </label>
+                            <input id="top-bar-search-input" type="text" name="q" size="20" maxlength="256" value="" style="padding: 0; border: 0px;"/>
+                            <input id="top-bar-search-button" type="image" src="https://cdn.usf.edu/themes/sun-globe/global/1.0.0/images/search/search-icon.png" alt="Go" />
+                            <input type="hidden" name="client" value="tampa" />
+                            <input type="hidden" name="proxystylesheet" value="usf-edu-cms" />
+                            <input type="hidden" name="site" value="tampa" />
+                            <input type="hidden" name="output" value="xml_no_dtd" />
+                            <input type="hidden" name="numgm" value="5" />
+                        </form>
+                    </div>
+                    <a class="top-bar-item" href="https://my.usf.edu/">myUSF</a>
+                    <a class="top-bar-item" href="http://directory.usf.edu/?logo=1">Directory</a>
+                    <a class="top-bar-item" href="http://assistive.usablenet.com/tt/referrer">Text-Only</a>
+                </div>
+                <!-- end top-bar-nav -->
+            </div><!-- end top-bar-nav-wrapper -->
+        </div><!-- end inside-header -->           
+    </header><!-- end header --><div id="content" class="container" role="main">
+        <h1 class="page-title-plain-text">Welcome to USF</h1>
+        <div class="application container">
+            <div class="application-control">
+                <h2 class="application-heading">USF NetID Single-SignOn</h2>
+                <form id="fm1" class="application-signon" action="/login;jsessionid=1CDD70D796B49187974129E34F371388?service=https%3A%2F%2Fusflearn.instructure.com%2Flogin%2Fcas" method="post"><div id="errors">
+                    </div>
+                  <label for="username" class="hidden">NetID:</label>
+                  <input id="username" name="username" class="application-field required" title="NetID" tabindex="1" autofocus="true" placeholder="NetID" aria-required="true" type="text" value="" autocomplete="off"/><label for="password" class="hidden">Password:</label>
+                  <input id="password" name="password" class="application-field required" title="Password" tabindex="2" placeholder="Password" aria-required="true" type="password" value="" autocomplete="off"/><i class="icon-arrow-up hide" id="CapsLockOn"></i>
+                    <input type="hidden" name="lt" value="LT-3384362-xQfFXrnyFmlcRuhkX3mLJDESbLPFt9" />
+                  <input type="hidden" name="execution" value="59b49151-f830-4623-929f-0e5f3f40a400_AAAAHgAAAAzJKaMWKLEFFUF7iyMAAAAGY2FzS2V5PEHiS58yqHrUzC/Ne2NmVwWZQM+A0KClhTG5U8osX8QxgCHwQozdaC0pbFHMYUcz7jjPcZaGDRC4HrC8pLW9ChJCJyYYUnDeacqIdDV/yu5y4lmYe61pQz6m7BMKBkfYd1WjbAlaXG+yEy4wGycJAWzrl/aq8N0J2fGAtHK3CDxr52/flHheVC8jD/Aw7hDBBq1yz7d9OGrnxKIOSPt0JZj5iNDYbUhs5Ja4dFuNm1TjlcF7dHZ7n7RHJ0tWM/9ecHF8mFMrLNc9gvZ8wXRAFPV9yzV8mkSmgCFnpp8WxM9KisxOvirC+mcTZr8mOvog/3lKTbHXSS0RjUk34NXfYXUP8N73j3+97wFCyTRqsj7L07xUQwH+GBVlzRR0gYUDAUmX5t/1re8tJ5BLchL8b813o+BUsgTwoQf28fJRcWUe7QoLuWP0WhdUK4M+d5rYVCiOWJeVdbdgn6TNBc1JTPUrieTyhlgOf+opG2CTSNR2u2wbOqjnM9+hvh2KLDm1bNVIVBdx66Rk3eNB2IjxDyoE6D1/hOKrt7GmSYY2JAP0lSU50Je9LEK2amYxmpL2673c9PGqrIepjNL7+CIfLG7nkWaHUeIbQUqHWoWSB+9o+nkPttfPW0S55XMN3Bd5x/DMEv64nW7dwzCrXihTOcJrJ8+UHDfwo7yiO4Ytoy+Serv03aKobN86yE3liJMSP4kshPJK9yVuxqWqIxVeYWC7MMke7O7XNQ/pYyxk+utV91pw3AW9HVw+zmSmnw5sFVs4+oaXbPE0QUxkRWNjz/T4T4GOgl/zgUqPGjEGRuYM2joex0aVGrjsjm7pLCxhjh7kWzOjHXBCLksY46S95IL+lmmXU/1uWr9WBR+VAxv+jL2KbxLVLw6UfqWMWxuC+IWzP606pfq2VYTkn3NTuIiu3HWXNYl+IRTgtPHGKNmAigUot6wACETUBFxApykZ0pFNQ37D5ffjnJQnGsJKlfh40UWfaJJyfEMwFmSPWXK68sFC8oMNhXc63UWVrp8kT2jNWhxtr2eSMRrj5UpIgFVVkoazcIE30vCDLYimQdK9cQ02Ji5gCOyIts3YYoP+mdVw6W5Lj7KcSKsj8qazRCDHX9zSJeHmSwpwPibqpPlEcYczc9IfD1lZOFqg/3Ca1sVean8ojcEP0QfZMi5PbVvXIXlyn8aWGH1bFZGBTWSqgnrTS91A1/1Bg/R/+sRO1LJKmg77wioS+O2c6eL5bqSHMtC4yDdnTINF2zu+UHobqRn/fdp8GSE8pl0SfTs3Fjhv/e78cPd2fzD2mbNziPJaG4kZHZzUoWQ=" />
+                  <input type="hidden" value="submit" name="_eventId">
+                  
+                  <input id="btn-submit" class="btn btn-primary btn-block" accesskey="l" value="Sign In" tabindex="3" type="submit" />
+                </form><p class="application-policy">By logging in, I agree to the terms of the <a href="http://www.usf.edu/it/class-prep/acceptable-use.aspx">Acceptable Use Policy</a>.</p>
+            </div><!-- end application-control -->
+
+            <div class="application-text" id="TextBox">
+                <p>You can use your USF NetID to access a variety of password-protected information and resources.</p>
+                <ul>
+                    <li><a href="http://www.usf.edu/it/services/netid.aspx">What is a USF NetID</a><br />
+                        Find out more</li>
+                    <li><a href="https://netid.usf.edu/una/?display=activate">Don't have a USF NetID?</a><br />
+                        Create an account now</li>
+                    <li><a href="https://netid.usf.edu/una/?display=reset">Forgot your password?</a><br />
+                        Reset your password</li>
+                    <li><a href="http://www.usf.edu/it/services/helpdesk.aspx">Need help?</a><br />
+                        Contact us</li>
+                </ul>
+            </div><!-- end application-text -->
+            <div class="application-text well" id="AlertBox">
+                </div><!-- end AlertBox -->            
+        </div><!-- end application -->       
+    </div><!-- end content -->
+    <!-- NetID format error modal -->
+    <!-- Modal -->
+    <div id="NetIDFormatModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="NetIDFormatModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 id="NetIDFormatModalLabel">Invalid NetID format</h3>
+      </div>
+      <div class="modal-body">
+        <h5>This appears to be an invalid NetID.</h5>
+        <h4>Correct:</h4>
+        <p>Netid: mmock</p>
+    
+        <h4>Incorrect:</h4>
+        <ul class="unstyled">
+          <li>Email Address: mmock@mail.usf.edu</li>
+          <li>Windows Login: domain\mmock</li>
+          <li>Unumber: U12345678</li>
+          <li>USFcard #: 6400130001234567</li>
+        </ul>
+      </div>
+    </div>
+<footer id="footer">
+        <div class="footer-content container">
+            <div class="footer-info">
+                <a href="http://www.usf.edu/"><img class="footer-usf-logo" src="https://cdn.usf.edu/themes/sun-globe/global/1.0.0/images/footer/footer-logo.png" alt="University of South Florida" /></a>
+                <p class="footer-copy">Copyright &copy; 2014, University of South Florida. All rights reserved.<br /> 4202 E. Fowler Avenue, CGS301, Tampa, FL 33620, USA &bull; 813-974-2011</p>
+            </div>
+
+
+<nav class="footer-navigation">
+  <ul>
+        <li><a title="USF Home" href="http://www.usf.edu/">USF Home</a></li>
+        <li><a title="About USF" href="http://www.usf.edu/about-usf/index.aspx">About USF</a></li>
+        <li><a title="Academics" href="http://www.usf.edu/academics/index.aspx">Academics</a></li>
+        <li><a title="Admissions" href="http://www.usf.edu/admission/index.aspx">Admissions</a></li>
+        <li><a title="Campus Life" href="http://www.usf.edu/campus-life/index.aspx">Campus Life</a></li>
+        <li><a title="Research" href="http://www.usf.edu/research/index.aspx">Research</a></li>
+        </ul>
+        <ul>
+        <li><a title="USF System" href="http://system.usf.edu" target="_blank">USF System</a></li>
+        <li><a title="Administrative Units" href="/about-usf/administrative-units.aspx">Administrative Units</a></li>
+        <li><a title="Regulations" href="http://regulationspolicies.usf.edu/regulations-and-policies/regulations-policies-procedures.asp" target="_blank">Regulations &amp; Policies</a></li>
+        <li><a title="Human Resources" href="http://usfweb2.usf.edu/human-resources/index.asp" target="_blank">Human Resources</a></li>
+        <li><a title="Emergency & Safety" href="http://news.usf.edu/article/templates/?a=813&amp;z=51" target="_blank">Emergency &amp; Safety</a></li>
+        <li><a title="Visit USF" href="/about-usf/visit-usf.aspx">Visit USF</a></li>
+        </ul>
+        <ul>
+        <li><a title="USF Health" href="http://health.usf.edu/" target="_blank">USF Health</a></li>
+        <li><a title="USF Athletics" href="http://www.gousfbulls.com/" target="_blank">USF Athletics</a></li>
+        <li><a title="USF Alumni" href="http://usfalumni.net/s/861/index.aspx" target="_blank">USF Alumni</a></li>
+        <li><a title="Support USF" href="http://usfweb3.usf.edu/unstoppable/index.aspx" target="_blank">Support USF</a></li>
+        <li><a title="USF Libraries" href="http://www.lib.usf.edu/" target="_blank">USF Libraries</a></li>
+        <li><a title="USF World" href="http://global.usf.edu/" target="_blank">USF World</a></li>
+    </ul>
+    </nav>
+  </div>
+</footer><!-- end footer -->
+
+</body>
+</html>

@@ -24,7 +24,7 @@ public class IntegerSpacing
         digit3 = number % 10; // remainder operation
       
         //display results
-        Console.WriteLine("Digits in {0} are : {1}   {2}   {3}", number, digit1, digit2, digit3);
+        Console.WriteLine("\nDigits in {0} are : {1}   {2}   {3}", number, digit1, digit2, digit3);
 
         }//end main method
 

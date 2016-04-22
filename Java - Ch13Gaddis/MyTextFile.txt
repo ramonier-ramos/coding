@@ -1,0 +1,5 @@
+This is a line of sample data to read into my program.  It is intentionally long enough to require wrapping.
+
+Here is a shorter line.
+
+Here is one last line.

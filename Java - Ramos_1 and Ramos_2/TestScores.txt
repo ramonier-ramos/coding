@@ -1,0 +1,41 @@
+
+TEST DATE: 2/11/2015
+NUMBER OF QUESTIONS: 50
+
+
+Employee Name: Dugger, Richard
+Number Missed: 4
+Score: 92.00
+Grade: Pass Plus
+
+
+Employee Name: Kaylor, Steven
+Number Missed: 7
+Score: 86.00
+Grade: Pass
+
+
+Employee Name: Brown, Jody
+Number Missed: 2
+Score: 96.00
+Grade: Pass Plus
+
+
+Employee Name: Hayes, Thomas
+Number Missed: 17
+Score: 66.00
+Grade: Fail
+
+
+Employee Name: Price, Michael
+Number Missed: 9
+Score: 82.00
+Grade: Pass
+
+
+    AVERAGE TEST SCORE: 84.40
+TOTAL PASS PLUS GRADES: 2
+     TOTAL PASS GRADES: 2
+     TOTAL FAIL GRADES: 1
+
+

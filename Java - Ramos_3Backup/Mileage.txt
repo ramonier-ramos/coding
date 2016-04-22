@@ -1,0 +1,8 @@
+CITY, Daytona Beach, Jacksonville, Key West, Miami, Orlando, Pensacola, Tampa
+Daytona Beach, 0, 89, 408, 257, 55, 425, 140
+Jacksonville, 89, 0, 495, 343, 135, 355, 190
+Key West, 408, 495, 0, 153, 369, 791, 387
+Miami, 257, 343, 153, 0, 231, 653, 249
+Orlando, 55, 135, 369, 231, 0, 429, 86
+Pensacola, 425, 355, 791, 653, 429, 0, 424
+Tampa, 140, 190, 387, 249, 86, 424, 0

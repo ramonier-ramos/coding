@@ -1,0 +1,18 @@
+Living Room
+18.5
+16
+Family Room
+15
+12
+Kitchen
+12.5
+9
+Master Bedroom
+18
+15
+Guest Bedroom
+16
+10.5
+Bathroom
+8
+6

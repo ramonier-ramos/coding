@@ -1,0 +1,132 @@
+Room name: Living Room
+Room length: 18.5
+Room width: 16.0
+Room area: 296.0
+
+Room name: Family Room
+Room length: 15.0
+Room width: 12.0
+Room area: 180.0
+
+Room name: Kitchen
+Room length: 12.5
+Room width: 9.0
+Room area: 112.5
+
+Room name: Master Bedroom
+Room length: 18.0
+Room width: 15.0
+Room area: 270.0
+
+Room name: Guest Bedroom
+Room length: 16.0
+Room width: 10.5
+Room area: 168.0
+
+Room name: Bathroom
+Room length: 8.0
+Room width: 6.0
+Room area: 48.0
+
+Total Area for House: 1074.5
+
+
+Room name: Living Room
+Room length: 18.5
+Room width: 16.0
+Room area: 296.0
+
+Room name: Family Room
+Room length: 15.0
+Room width: 12.0
+Room area: 180.0
+
+Room name: Kitchen
+Room length: 12.5
+Room width: 9.0
+Room area: 112.5
+
+Room name: Master Bedroom
+Room length: 18.0
+Room width: 15.0
+Room area: 270.0
+
+Room name: Guest Bedroom
+Room length: 16.0
+Room width: 10.5
+Room area: 168.0
+
+Room name: Bathroom
+Room length: 8.0
+Room width: 6.0
+Room area: 48.0
+
+Total Area for House: 1074.5
+
+
+Room name: Living Room
+Room length: 18.5
+Room width: 16.0
+Room area: 296.0
+
+Room name: Family Room
+Room length: 15.0
+Room width: 12.0
+Room area: 180.0
+
+Room name: Kitchen
+Room length: 12.5
+Room width: 9.0
+Room area: 112.5
+
+Room name: Master Bedroom
+Room length: 18.0
+Room width: 15.0
+Room area: 270.0
+
+Room name: Guest Bedroom
+Room length: 16.0
+Room width: 10.5
+Room area: 168.0
+
+Room name: Bathroom
+Room length: 8.0
+Room width: 6.0
+Room area: 48.0
+
+Total Area for House: 1074.5
+
+
+Room name: Living Room
+Room length: 18.5
+Room width: 16.0
+Room area: 296.0
+
+Room name: Family Room
+Room length: 15.0
+Room width: 12.0
+Room area: 180.0
+
+Room name: Kitchen
+Room length: 12.5
+Room width: 9.0
+Room area: 112.5
+
+Room name: Master Bedroom
+Room length: 18.0
+Room width: 15.0
+Room area: 270.0
+
+Room name: Guest Bedroom
+Room length: 16.0
+Room width: 10.5
+Room area: 168.0
+
+Room name: Bathroom
+Room length: 8.0
+Room width: 6.0
+Room area: 48.0
+
+Total Area for House: 1074.5
+
+

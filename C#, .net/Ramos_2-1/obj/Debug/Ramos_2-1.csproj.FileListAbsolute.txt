@@ -1,0 +1,6 @@
+c:\users\ramonier ramos\documents\visual studio 2012\Projects\Ramos_2-1\Ramos_2-1\bin\Debug\Ramos_2-1.exe.config
+c:\users\ramonier ramos\documents\visual studio 2012\Projects\Ramos_2-1\Ramos_2-1\bin\Debug\Ramos_2-1.exe
+c:\users\ramonier ramos\documents\visual studio 2012\Projects\Ramos_2-1\Ramos_2-1\bin\Debug\Ramos_2-1.pdb
+c:\users\ramonier ramos\documents\visual studio 2012\Projects\Ramos_2-1\Ramos_2-1\obj\Debug\Ramos_2-1.csprojResolveAssemblyReference.cache
+c:\users\ramonier ramos\documents\visual studio 2012\Projects\Ramos_2-1\Ramos_2-1\obj\Debug\Ramos_2-1.exe
+c:\users\ramonier ramos\documents\visual studio 2012\Projects\Ramos_2-1\Ramos_2-1\obj\Debug\Ramos_2-1.pdb

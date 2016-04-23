@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript" src="loadxmldoc.js"></script>
+</head>
+<body>
+<h2>My Transcript</h2>
+<script type="text/javascript">
+xmlDoc=loadXMLDoc("transcript.xml");
+var x=xmlDoc.getElementsByTagName("Course");
+
+document.write("<table border='1'>");
+document.write("<thead>");
+document.write("<tr bgcolor=#9acd32><th>Department</th><th>Number</th><th>Instructor</th><th>Title</th><th>Grade</th></tr>");
+document.write("</thead>");
+
+for (var i=0;i<x.length;i++)
+{ 
+document.write("<tr>");
+document.write("<td>");
+document.write(x[i].getElementsByTagName("Department")[0].childNodes[0].nodeValue);
+document.write("</td>");
+
+document.write("<td>");
+document.write(x[i].getElementsByTagName("Number")[0].childNodes[0].nodeValue);
+document.write("</td>");
+
+document.write("<td>");
+document.write(x[i].getElementsByTagName("Instructor")[0].childNodes[0].nodeValue);
+document.write("</td>");
+
+document.write("<td>");
+document.write(x[i].getElementsByTagName("Title")[0].childNodes[0].nodeValue);
+document.write("</td>");
+
+document.write("<td>");
+document.write(x[i].getElementsByTagName("Grade")[0].childNodes[0].nodeValue);
+document.write("</td>");
+
+document.write("</tr>");
+}
+document.write("</table>");
+
+</script>
+
+</body>
+</html>
+
+

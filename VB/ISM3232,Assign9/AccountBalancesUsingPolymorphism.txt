@@ -1,0 +1,4 @@
+Cash,6000
+AccountsReceivable,3000
+AccountsPayable,2000
+RetainedEarnings,7000

@@ -1,0 +1,6 @@
+C101,Tracy,Brown,5000,2005,(941)123-4567,Parrish,FL
+C102,John,Smith,4000,2009,(941)234-5678,Brandon,FL
+C103,Andrew,Carpenter,6000,2010,(941)345-6789,Bradenton,FL
+C104,Kelly,Tapler,2000,1999,(941)456-7890,Sarasota,FL
+C105,Greg,Allison,10000,2001,(941)567-8901,Venice,FL
+C106,James,Bond,8000,2003,(941)678-9012,Nokomis,FL

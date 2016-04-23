@@ -1,0 +1,3 @@
+Rectangle,1000
+Triangle,500
+Circle,7853.981
